@@ -1,0 +1,29 @@
+#include <Servo.h>
+
+Servo baseServo;
+Servo shoulderServo;
+Servo elbowServo;
+
+void setup() {
+  baseServo.attach(9);
+  shoulderServo.attach(10);
+  elbowServo.attach(11);
+}
+
+void loop() {
+  moveRobotArm();
+}
+
+void moveRobotArm() {
+  // Example movement
+  baseServo.write(90);      // Set base servo angle to 90 degrees
+  delay(1000);
+  
+  shoulderServo.write(45);  // Set shoulder servo angle to 45 degrees
+  delay(1000);
+  
+  elbowServo.write(135);    // Set elbow servo angle to 135 degrees
+  delay(1000);
+  
+  // Add more movements or integrate sensor feedback based on your project requirements
+}
